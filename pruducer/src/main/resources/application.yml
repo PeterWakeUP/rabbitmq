@@ -1,0 +1,12 @@
+server:
+  port: 8001
+
+
+spring:
+  rabbitmq:
+    port: 5672
+    username: guest
+    password: guest
+    connection-timeout: 5000
+    virtual-host: /
+    host: 127.0.0.1
