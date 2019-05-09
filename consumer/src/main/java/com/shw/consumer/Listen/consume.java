@@ -32,7 +32,7 @@ public class consume {
 
         Long deliveryTag = (Long) headers.get(AmqpHeaders.DELIVERY_TAG);
 
-        //ack,手工确认签收，主动回mq broker一个请求, 第二个参数是否批量接受
+        //ack,手工确认签收，主动回mq broker一个请求, 第二个参数表示一次是否 ack 多条消息
         channel.basicAck(deliveryTag, false);
     }
 }
