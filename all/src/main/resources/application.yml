@@ -1,0 +1,19 @@
+server:
+  port: 8003
+
+
+spring:
+  rabbitmq:
+    port: 5672
+    username: guest
+    password: guest
+    connection-timeout: 5000
+    virtual-host: /
+    host: 127.0.0.1
+    #消费端配置
+    listener:
+      simple:
+        concurrency: 5  #默认并发数
+        max-concurrency: 10  #最大并发数
+        acknowledge-mode: manual  #签收模式，手动
+        prefetch: 1  #同一时间消费1个消息
